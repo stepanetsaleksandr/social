@@ -5,7 +5,7 @@ import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = () => {
     return (
-        <div className={classes.content}>
+        <div>
             <div> <img src='https://landlord.ua/wp-content/uploads/2020/07/CL-20.026.001-1-920x418.jpg'/></div>
             <div>ava+description</div>
 
