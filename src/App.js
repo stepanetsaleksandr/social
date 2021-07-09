@@ -15,8 +15,16 @@ const App = (props) => {
                 <Navbar/>
                 <div className='app-wrapper-content'>
 
-                    <Route path='/dialog' render={() => <Dialogs messages={props.state.messagesPage.messages} dialogs={props.state.messagesPage.dialogs}/>}/>
-                    <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts}/>}/>
+                    <Route path='/dialog' render={() => <Dialogs messages={props.state.messagesPage.messages}
+                                                                 dialogs={props.state.messagesPage.dialogs}
+                                                                 updateNewMessageText={props.updateNewMessageText} // 6. Передаем дальше в пропсах в Dialogs.jsx
+                    />}/>
+                    <Route path='/profile' render={() => <Profile profilePage={props.state.profilePage}
+                                                                  addPost={props.addPost}
+                                                                  updateNewPostText={props.updateNewPostText}
+
+
+                    />}/>
 
 
                 </div>

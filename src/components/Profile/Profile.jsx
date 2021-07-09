@@ -9,7 +9,13 @@ const Profile = (props) => {
     return (
         <div>
             <ProfileInfo/>
-            <MyPosts posts={props.posts}/>
+            <MyPosts posts={props.profilePage.posts}
+                     newPostText={props.profilePage.newPostText} //прокинули данные в текстовое поле из стейта
+                     updateNewPostText={props.updateNewPostText}
+
+
+                     addPost={props.addPost}/>
+
         </div>
 
     )
